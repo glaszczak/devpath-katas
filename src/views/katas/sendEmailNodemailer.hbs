@@ -1,0 +1,60 @@
+<form action='/mailer/sendEmailNodemailer' method='post'>
+  <div class='row mt-5 mb-3'>
+    <div class='col-md-6 m-auto'>
+      <div class='card card-body text-center'>
+        <button class='btn btn-secondary btn-block'>
+          Send Email
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class='jumbotron'>
+    <div class='input-group input-group-sm mb-3'>
+      <div class='input-group-prepend'>
+        <span class='input-group-text' id='inputGroup-sizing-sm'>
+          To
+        </span>
+      </div>
+      <input
+        type='text'
+        name='to'
+        class='form-control'
+        aria-label='Small'
+        aria-describedby='inputGroup-sizing-sm'
+        value="{{to}}"
+        required
+      />
+    </div>
+
+    <div class='input-group input-group-sm mb-3'>
+      <div class='input-group-prepend'>
+        <span class='input-group-text' id='inputGroup-sizing-sm'>
+          Subject
+        </span>
+      </div>
+      <input
+        type='text'
+        name='subject'
+        class='form-control'
+        aria-label='Small'
+        aria-describedby='inputGroup-sizing-sm'
+        value="{{subject}}"
+      />
+    </div>
+
+    <div class='input-group'>
+      <div class='input-group-prepend'>
+        <span class='input-group-text'>
+          Text
+        </span>
+      </div>
+      <textarea
+        name='textArea'
+        class='form-control'
+        aria-label='emailText'
+        required
+      ></textarea>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,16 @@
+<div class="jumbotron mt-5">
+  <p>
+    {{#each users}}
+      {{#each this}}
+        <ul>
+          <li>
+            {{@key}} = '{{this}}';
+          </li>
+        </ul>
+      {{/each}}
+    {{/each}}
+  </p>
+</div>
+
+<div class="jumbotron mt-5">
+</div>

@@ -1,0 +1,52 @@
+<div class='jumbotron mt-5'>
+  <div class='row mt-5 mb-2'>
+    <div class='col-md-6 m-auto'>
+      <div class='card card-body text-center'>
+        <a class='btn btn-secondary btn-block' href='/s3/showAllObjects'>
+          Show All Objects
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class='row mt-5 mb-2'>
+    <div class='col-md-6 m-auto'>
+      <div class='card card-body text-center'>
+        <a class='btn btn-secondary btn-block' href='/s3/uploadFile'>
+          Upload File
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class='row mt-5 mb-2'>
+    <div class='col-md-6 m-auto'>
+      <div class='card card-body text-center'>
+        <a class='btn btn-secondary btn-block' href='/s3/getUrl'>
+          Get URL
+        </a>
+        {{#if url}}
+          <ul>
+            {{#each url}}
+              <li>
+                <a class='btn btn-secondary btn-block' href={{this}}>
+                  {{this}}
+                </a>
+              </li>
+            {{/each}}
+          </ul>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+
+  <div class='row mt-5 mb-2'>
+    <div class='col-md-6 m-auto'>
+      <div class='card card-body text-center'>
+        <a class='btn btn-secondary btn-block' href='/s3/deleteFile'>
+          Delete File
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

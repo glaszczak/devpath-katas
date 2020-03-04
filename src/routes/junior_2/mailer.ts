@@ -2,14 +2,14 @@ import express, { Application, Request, Response, NextFunction } from 'express';
 // import { EmailSender } from '../mailers/EmailSender';
 // const camelcaseKeys = require('camelcase-keys');
 
-const sesClient = require('../mailers/EmailSenderSES');
-const nodemailerClient = require('../mailers/EmailSenderNodemailer');
+const sesClient = require('../../mailers/EmailSenderSES');
+const nodemailerClient = require('../../mailers/EmailSenderNodemailer');
 
 const router = express.Router();
 
 // ---------- SEND EMAIL SES ----------
 router.get('/sendEmail', async (req: Request, res: Response) => {
-  res.render('katas/sendEmail');
+  res.render('junior_2/sendEmail');
 });
 
 router.post('/sendEmail', async (req: Request, res: Response) => {
@@ -17,7 +17,7 @@ router.post('/sendEmail', async (req: Request, res: Response) => {
 
   sesClient.sendEmail(to, subject, textArea);
 
-  res.render('katas/sendEmail'),
+  res.render('junior_2/sendEmail'),
     {
       to,
       subject,
@@ -27,7 +27,7 @@ router.post('/sendEmail', async (req: Request, res: Response) => {
 
 // ---------- SEND EMAIL NODEMAILER ----------
 router.get('/sendEmailNodemailer', async (req: Request, res: Response) => {
-  res.render('katas/sendEmailNodemailer');
+  res.render('junior_2/sendEmailNodemailer');
 });
 
 router.post('/sendEmailNodemailer', async (req: Request, res: Response) => {
@@ -35,7 +35,7 @@ router.post('/sendEmailNodemailer', async (req: Request, res: Response) => {
 
   nodemailerClient.sendEmailNodemailer(to, subject, textArea);
 
-  res.render('katas/sendEmailNodemailer'),
+  res.render('junior_2/sendEmailNodemailer'),
     {
       to,
       subject,

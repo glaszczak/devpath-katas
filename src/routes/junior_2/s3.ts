@@ -1,10 +1,10 @@
 import express, { Application, Request, Response, NextFunction } from 'express';
-import { S3Service } from '../services/s3';
+import { S3Service } from '../../services/s3';
 
 const router = express.Router();
 
 router.get('/', async (req: Request, res: Response) => {
-  res.render('katas/s3');
+  res.render('junior_2/s3');
 });
 
 router.get('/showAllObjects', async (req: Request, res: Response) => {
@@ -29,6 +29,6 @@ router.get('/deleteFile', async (req: Request, res: Response) => {
 router.get('/getUrl', async (req: Request, res: Response) => {
   const url = await S3Service.getUrl();
 
-  res.render('katas/s3', { url: url });
+  res.render('junior_2/s3', { url: url });
 });
 export default router;

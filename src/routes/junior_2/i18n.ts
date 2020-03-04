@@ -29,7 +29,7 @@ router.use(i18n.init);
 hbs.registerHelper('i18n', helper.i18n);
 
 router.get('/', async (req: Request, res: Response) => {
-  res.render('katas/i18n', {
+  res.render('junior_2/i18n', {
     i18n: res,
   });
 });
@@ -39,17 +39,16 @@ router.get('/', async (req: Request, res: Response) => {
 // });
 
 router.get('/pl', async (req: Request, res: Response) => {
-  res.cookie('i18n', 'pl');
-  res.redirect('/i18n');
-  // res.render('katas/i18n');
+  // res.cookie('i18n', 'pl');
+  res.render('junior_2/i18n');
 });
 
 router.get('/de', async (req: Request, res: Response) => {
-  res.render('katas/i18n');
+  res.render('junior_2/i18n');
 });
 
 router.get('/en', async (req: Request, res: Response) => {
-  res.render('katas/i18n');
+  res.render('junior_2/i18n');
 });
 
 export default router;

@@ -1,0 +1,42 @@
+<div class='jumbotron mt-5' style='padding: 15px;'>
+  {{#if time}}
+    <div>
+      Job finished within {{time}} seconds
+    </div>
+
+    {{#if report}}
+      <ul>
+        <div class='col mt-5' style='padding : 0px; margin-left: 0px;'>
+          <p>
+            Report Date: {{dateFormat report.date 'DD.MM.YYYY hh:mm:ss'}}
+          </p>
+
+          <table class='table table-striped table-dark table-hover'>
+            <thead class='thead-dark'>
+              <tr>
+                <th>
+                  User number
+                </th>
+                <th>
+                  User name
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each report.data}}
+                <tr>
+                  <td>
+                    {{this.user}}
+                  </td>
+                  <td>
+                    {{this.name}}
+                  </td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </ul>
+    {{/if}}
+  {{/if}}
+</div>

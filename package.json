@@ -45,10 +45,12 @@
     "express-handlebars": "^3.1.0",
     "express-session": "^1.17.0",
     "handlebars": "^4.7.3",
+    "handlebars-dateformat": "^1.1.1",
     "hbs": "^4.1.0",
     "i18n": "^0.8.5",
     "mongoose": "^5.8.11",
     "ncp": "^2.0.0",
+    "node-cron": "^2.0.3",
     "nodemailer": "^6.4.2",
     "rimraf": "^3.0.2"
   }
